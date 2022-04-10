@@ -27,7 +27,7 @@ public class RestExceptionHandler {
     public ResponseEntity<ErrorEntity> handleFileSystemFileNotFoundException(DirSystemFileNotFoundException e) {
 
         ErrorEntity entity = new ErrorEntity();
-        entity.setMessage("File does not exists '"+e.getPath()+"'");
+        entity.setMessage("Directory does not exists '"+e.getPath()+"'");
         entity.setStatus(HttpStatus.BAD_REQUEST.toString());
         return new ResponseEntity<>(entity, HttpStatus.BAD_REQUEST);
     }
